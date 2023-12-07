@@ -1,0 +1,54 @@
+<div class="create-project" [formGroup]="formTask">
+  <h1 class="textPrincipal">CREACION DE TAREA</h1>
+  <div class="containerForm">
+    <div class="">
+      <div>
+        <h1 class="textSecundary">Titulo</h1>
+        <mat-form-field appearance="outline" class="input">
+          <input
+            style="padding-left: 1rem"
+            type="text"
+            matInput
+            placeholder="Titlo de la Tarea"
+            formControlName="title"
+          />
+
+          <mat-error>Ingrese un titulo Valido</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <h1 class="textSecundary">Descripcion</h1>
+        <mat-form-field appearance="outline" class="input">
+          <input
+            style="padding-left: 1rem"
+            type="text"
+            matInput
+            placeholder="Descripcion"
+            formControlName="description"
+          />
+
+          <mat-error>Ingrese una Descripcion Valida</mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div  class="combo">
+        <p>Proyecto</p>
+        <div class="project">
+          <mat-select  formControlName="id_project" class="combito" placeholder="Ingresa" >
+            <mat-option *ngFor="let item of projects" [value]="item.id_project">
+              {{item.name_project}}
+            </mat-option>
+        </mat-select>
+
+        <span (click)="openModalCreateProject()">Nuevo Proyecto? Clickea aquí</span>
+        </div>
+
+      </div>
+      <div class="save">
+
+       <button class="button-save" (click)="saveTask()">Guardar Tarea</button>
+      </div>
+    </div>
+  </div>
+</div>

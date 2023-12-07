@@ -1,0 +1,21 @@
+<div class="main" [formGroup]="formProject">
+  <div class="container_form">
+      <p>Nombre del Proyecto</p>
+      <mat-form-field appearance="outline" class="input">
+        <input
+          style="padding-left: 1rem"
+          type="text"
+          matInput
+          placeholder="Titlo del Proyecto"
+          formControlName="name_project"
+        />
+
+        <mat-error>Ingrese un titulo Valido</mat-error>
+      </mat-form-field>
+
+      <div class="save">
+        <button  class="button-save" (click)="saveProject()" >Guardar</button>
+      </div>
+
+  </div>
+</div>

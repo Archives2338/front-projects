@@ -1,0 +1,222 @@
+.drawer {
+  height: 100vh;
+  box-shadow: 0px 0px 14px rgba(198, 226, 255, 0.438245);
+  border-radius: 0px 22px 0px 0px;
+  position: sticky;
+  transition: width 0.8s;
+  background-color: #fff;
+  // overflow-y: scroll;
+
+  .logo {
+    height: 7.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    img {
+      max-width: 305px;
+      width: 60%;
+    }
+    .opacity {
+      display: none;
+    }
+  }
+
+
+  .containerLogo {
+    display: flex;
+    /* width: 100%; */
+    justify-content: center;
+    align-items: center;
+    .logo {
+      border: 1px dashed #3ea3ef;
+      border-radius: 50%;
+      width: 116px;
+      height: 116px;
+    }
+  }
+  .logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+
+    img {
+      cursor: pointer;
+      width: 70px;
+      margin: 0.5rem;
+    }
+  }
+
+  .title {
+    // border-top: 2px solid #98cff4;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    margin-top: 55px;
+    // justify-content: center;
+    flex-direction: column;
+
+    p {
+      text-align: center;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 18px;
+      color: #01387b;
+    }
+    .subtitle {
+      cursor: pointer;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 21px;
+      /* identical to box height, or 140% */
+
+      letter-spacing: 0.0214286px;
+
+      color: #FC7B71;
+    }
+    .opacity {
+      display: none;
+    }
+  }
+
+  .modulos::-webkit-scrollbar {
+    width: 8px; /* width of the entire scrollbar */
+  }
+
+  .modulos::-webkit-scrollbar-track {
+    background: #fff; /* color of the tracking area */
+  }
+
+  .modulos::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+  }
+
+  .modulos {
+    height: calc(100% - 30rem);
+    overflow-y: scroll;
+
+    .modulo {
+      cursor: pointer ;
+      margin-top: 40px;
+      width: 95%;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      height: 87px;
+    box-shadow: 0px 0px 14px rgba(202, 229, 249, 0.5);
+    border-radius: 22px;
+        span{
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          color: #6A7183;
+          margin-left: 0.5rem;
+        }
+    }
+
+    .modulo-close {
+      h4 {
+        display: none;
+      }
+      .vista {
+        .txt {
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .divLogout{
+    display: flex;
+
+    width: 100%;
+    justify-content: center;
+
+    .logout{
+      cursor: pointer;
+      padding-bottom: 19px;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 16px;
+      padding-left: 15px;
+      letter-spacing: 0.0214286px;
+      color: #008467;
+    }
+  }
+
+
+}
+
+
+
+h4 {
+  color: #696A8F;
+}
+:host ::ng-deep mat-expansion-panel-header[aria-expanded="true"] {
+  .mat-expansion-indicator::after {
+    color: #696A8F!important;
+    margin-top: -2px !important;
+  }
+  .icon-inactivo {
+    display: none;
+  }
+  .icon-activo {
+    display: block;
+  }
+
+  .panel-title-text {
+    font-family: "Roboto";
+    font-weight: 700 !important;
+    color: #696A8F !important;
+    line-height: 21px;
+    letter-spacing: 0.02px;
+  }
+  mat-expansion-panel-header {
+    border-left: 4px solid #9597c7 !important;
+    height: 48px !important;
+  }
+
+  .drawer mat-expansion-panel-header {
+    align-items: center;
+    color: #9597c7;
+    border-left: 7px solid red !important;
+  }
+}
+
+:host ::ng-deep mat-expansion-panel-header[aria-expanded="false"] {
+  // .mat-expansion-indicator::after {
+  //   color: #01387b;
+  // }
+  .mat-expansion-indicator::after {
+    color: #01387b;
+  }
+
+  .panel-title-text {
+    font-family: "Roboto";
+    font-weight: 700 !important;
+    color: #01387b !important;
+    line-height: 21px;
+    letter-spacing: 0.02px;
+  }
+
+
+}
+
+::ng-deep .mat-content {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+}

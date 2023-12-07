@@ -1,0 +1,26 @@
+<div class="main">
+  <div class="title">
+    <p>Proyecto : {{projectTaskData?.project?.name_project}}</p>
+  </div>
+
+  <div class="board">
+    <div class="column">
+      <div class="column-header">To Do</div>
+      <div class="card" *ngFor="let item of projectTaskData?.project?.toDo" (click) = openModalInfoTask(item)>{{item.title}}</div>
+
+      <button class="add-button" (click)="openCreateTaskModal()" *ngIf="validateUser()">Add Task</button>
+    </div>
+    <div class="column">
+      <div class="column-header">In Progress</div>
+      <div class="card" *ngFor="let item of projectTaskData?.project?.doing" (click) = openModalInfoTask(item)>{{item.title}}</div>
+      <!-- Cards in progress -->
+    </div>
+    <div class="column">
+      <div class="column-header">Done</div>
+      <div class="card" *ngFor="let item of projectTaskData?.project?.done" (click) = openModalInfoTask(item)>{{item.title}}</div>
+      <!-- Completed cards -->
+    </div>
+  </div>
+</div>
+
+<app-loader></app-loader>

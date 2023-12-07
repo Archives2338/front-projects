@@ -1,0 +1,39 @@
+
+
+<div class="main" style="margin-top: 100px;">
+  <div class="main-table">
+
+
+
+    <div class="table-body">
+      <table>
+        <tr class="table-body-head" >
+          <td *ngFor="let colum of columnsTable">
+            <div style="display: inline-flex;">
+              <h4  >{{colum}} <img src="assets/svg/sort.svg" alt=""></h4>
+
+            </div>
+
+          </td>
+        </tr>
+        <tr
+          class="table-body-row"
+          *ngFor="
+            let item of sortProjectsData
+              | paginate : { itemsPerPage: group, currentPage: page }
+          "
+        >
+         <td>{{item.id_project}}</td>
+
+         <td>{{item.name_project}}</td>
+
+         <td> <a  [routerLink]="route(item.id_project)" routerLinkActive="router-link-active"  >Ver Tareas</a></td>
+
+        </tr>
+      </table>
+    </div>
+
+
+
+  </div>
+</div>

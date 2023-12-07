@@ -1,0 +1,83 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+.main{
+  width: 95%;
+  margin: 0 auto 1%;
+  background: #ffffff;
+  box-shadow: 0 0 14px #cae5f980;
+  border-radius: 22px;
+  .title{
+    margin-top: 40px;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+    p{
+      margin-top: 50px;
+      font-family: Metropolis;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 30px;
+      letter-spacing: .13px;
+      color: #01387b;
+    }
+
+}
+.board {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.column {
+  min-height: 200px;
+  flex: 1;
+  background-color: lighten($primary-color, 20%);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 10px;
+  max-width: 300px;
+
+  & + .column {
+    margin-left: 0;
+  }
+
+  .column-header {
+    background-color: $primary-color;
+    color: white;
+    padding: 8px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .add-button {
+    background-color: $secondary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 8px;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+}
+

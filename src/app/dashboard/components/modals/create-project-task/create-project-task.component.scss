@@ -1,0 +1,45 @@
+input{
+  outline: none;
+  border: none;
+}
+::ng-deep .custom-modalbox .mat-mdc-dialog-container {
+  border-radius: 26px !important;
+  overflow: hidden !important;
+  position: relative;
+}
+
+.main{
+  padding: 30px;
+  width: 100%;
+  .container_form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    .save{
+      cursor: pointer;
+      // margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      .button-save{
+        font-size: 14px;
+        font-weight: 700;
+        height: 50px!important;
+        padding: 0 24px;
+        border-radius: 22px!important;
+        background-color: #008467!important;
+        color: white;
+      }
+    }
+  }
+}
+p{
+  color: #01387b;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 26px; /* 108.333% */
+  letter-spacing: 0.038px;
+}

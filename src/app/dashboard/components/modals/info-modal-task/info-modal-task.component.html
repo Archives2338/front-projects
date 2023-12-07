@@ -1,0 +1,22 @@
+<div class="modal-info-task">
+<div class="div-description-title">
+  <p>Tarea : <br>{{task.title}}</p>
+</div>
+<div class="div-description">
+  <p>Descripcion: <br> {{task.description}}</p>
+</div>
+<div class="state">
+  <p>Estado:</p>
+  <button
+  [ngClass]="{ 'v-btn--active': a.id == pointerState }"
+  class="v-btn v-btn--size-default "
+   *ngFor="let a of arrayStates"
+   (click)="changeState(a.id)"
+   > {{a.name}}</button>
+</div>
+<div class="save">
+  <button class="button-save" (click)="save()">
+    <p>Guardar</p>
+  </button>
+</div>
+</div>
